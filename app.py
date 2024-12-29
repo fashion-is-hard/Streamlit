@@ -34,7 +34,7 @@ def main():
                 img2=np.array(img)
                 img2=cv2.resize(img2,(180,180))
                 img_4d=img2.reshape((1, 180, 180, 3))
-                prediction = random.randarange(0,3)
+                prediction = random.randrange(0,3)
                 label=['조선시대', '일제강점기', '광복이후']
                 st.subheader("추정 결과 [%s] 입니다." %label[prediction])
                 st.image(img, width=500)
