@@ -1,5 +1,5 @@
 
-
+import os
 import streamlit as st
 from PIL import Image
 import numpy as np
@@ -8,6 +8,8 @@ import tensorflow as tf
 import pickle
 import matplotlib.pyplot as plt
 from PIL import Image
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 with open('model_3.pickle', 'rb') as f:
     
