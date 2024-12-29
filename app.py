@@ -12,9 +12,9 @@ import random
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-'''with open('model_3.pickle', 'rb') as f:
+with open('model_3.pickle', 'rb') as f:
     
-    model_3 = pickle.load(f)'''
+    model_3 = pickle.load(f)
 
 def main():
 
@@ -34,9 +34,9 @@ def main():
                 img2=np.array(img)
                 img2=cv2.resize(img2,(180,180))
                 img_4d=img2.reshape((1, 180, 180, 3))
-                prediction = random.randrange(0,3)
+                prediction = model_3.predict(img_4d)
                 label=['조선시대', '일제강점기', '광복이후']
-                st.subheader("추정 결과 [%s] 입니다." %label[prediction])
+                st.subheader("추정 결과 [%s] 입니다." %label[np.argmax(prediction[0])])
                 st.image(img, width=500)
 
 
