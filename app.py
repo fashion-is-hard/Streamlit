@@ -18,7 +18,7 @@ with open('model_3.pickle', 'rb') as f:
 
 def main():
 
-    st.title('저고리 유물 시대 예측 프로그램')
+    st.title('저고리 유물 시대 예측 프로그램 (beta)')
     st.write('2024-2 융합소프트웨어프로젝트 | 2045013 의류산업학과 김세희')
     st.info('왼쪽 메뉴에서 유물 이미지를 업로드 해주세요.', icon='📢')
 
